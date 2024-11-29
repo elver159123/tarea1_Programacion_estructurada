@@ -332,7 +332,7 @@ def control_de_acceso():
 
 # Ventana principal
 root = tk.Tk()
-root.title("Aplicación Multitareas")
+root.title("Mi deber de programacion segunda parte")
 root.geometry("600x500")
 root.config(bg="#000000")  # Fondo de la ventana
 
