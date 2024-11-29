@@ -15,9 +15,15 @@ def descuento_tienda():
                 messagebox.showerror("Error", "Descuento no válido. Use 25, 50 o 75.")
         except ValueError:
             messagebox.showerror("Error", "Ingrese números válidos.")
-
+    
     ventana = tk.Toplevel(root)
     ventana.title("Descuento en una tienda")
+
+    ventana.geometry("400x200")
+
+    frame = tk.Frame(ventana)
+    frame.pack(expand=True, fill="both", padx=10, pady=10)
+
     tk.Label(ventana, text="Cantidad de dinero:").pack(pady=5)
     entry_cantidad = tk.Entry(ventana)
     entry_cantidad.pack(pady=5)
@@ -42,6 +48,11 @@ def edad_para_votar():
 
     ventana = tk.Toplevel(root)
     ventana.title("Edad para votar")
+    ventana.geometry("400x200")
+
+    frame = tk.Frame(ventana)
+    frame.pack(expand=True, fill="both", padx=10, pady=10)
+
     tk.Label(ventana, text="Ingrese su edad:").pack(pady=5)
     entry_edad = tk.Entry(ventana)
     entry_edad.pack(pady=5)
@@ -61,6 +72,11 @@ def mayor_de_tres_numeros():
 
     ventana = tk.Toplevel(root)
     ventana.title("Mayor de tres números")
+    ventana.geometry("400x200")
+
+    frame = tk.Frame(ventana)
+    frame.pack(expand=True, fill="both", padx=10, pady=10)
+
     tk.Label(ventana, text="Ingrese tres números:").pack(pady=5)
     entry1 = tk.Entry(ventana)
     entry1.pack(pady=5)
@@ -88,6 +104,11 @@ def clasificacion_edades():
 
     ventana = tk.Toplevel(root)
     ventana.title("Clasificación de edades")
+    ventana.geometry("400x200")
+
+    frame = tk.Frame(ventana)
+    frame.pack(expand=True, fill="both", padx=10, pady=10)
+
     tk.Label(ventana, text="Ingrese su edad:").pack(pady=5)
     entry_edad = tk.Entry(ventana)
     entry_edad.pack(pady=5)
@@ -113,6 +134,11 @@ def calculadora_basica():
 
     ventana = tk.Toplevel(root)
     ventana.title("Calculadora básica")
+    ventana.geometry("400x200")
+
+    frame = tk.Frame(ventana)
+    frame.pack(expand=True, fill="both", padx=10, pady=10)
+
     tk.Label(ventana, text="Ingrese dos números:").pack(pady=5)
     entry1 = tk.Entry(ventana)
     entry1.pack(pady=5)
@@ -136,6 +162,11 @@ def determinar_bisiesto():
 
     ventana = tk.Toplevel(root)
     ventana.title("Determinar año bisiesto")
+    ventana.geometry("400x200")
+
+    frame = tk.Frame(ventana)
+    frame.pack(expand=True, fill="both", padx=10, pady=10)
+
     tk.Label(ventana, text="Ingrese un año:").pack(pady=5)
     entry_year = tk.Entry(ventana)
     entry_year.pack(pady=5)
@@ -154,6 +185,11 @@ def validar_contraseña():
 
     ventana = tk.Toplevel(root)
     ventana.title("Validar contraseña")
+    ventana.geometry("400x200")
+
+    frame = tk.Frame(ventana)
+    frame.pack(expand=True, fill="both", padx=10, pady=10)
+
     tk.Label(ventana, text="Ingrese la contraseña:").pack(pady=5)
     entry_contraseña = tk.Entry(ventana, show="*")
     entry_contraseña.pack(pady=5)
@@ -174,6 +210,11 @@ def juego_de_numeros():
 
     ventana = tk.Toplevel(root)
     ventana.title("Juego de Números")
+    ventana.geometry("400x200")
+
+    frame = tk.Frame(ventana)
+    frame.pack(expand=True, fill="both", padx=10, pady=10)
+
     tk.Label(ventana, text="Adivina el número (1-10):").pack(pady=5)
     entry_numero = tk.Entry(ventana)
     entry_numero.pack(pady=5)
@@ -217,6 +258,11 @@ def calcular_signo_zodiacal():
 
     ventana = tk.Toplevel(root)
     ventana.title("Calcular signo zodiacal")
+    ventana.geometry("400x200")
+
+    frame = tk.Frame(ventana)
+    frame.pack(expand=True, fill="both", padx=10, pady=10)
+
     tk.Label(ventana, text="Día de nacimiento:").pack(pady=5)
     entry_dia = tk.Entry(ventana)
     entry_dia.pack(pady=5)
@@ -247,6 +293,11 @@ def sistema_de_calificaciones():
 
     ventana = tk.Toplevel(root)
     ventana.title("Sistema de calificaciones")
+    ventana.geometry("400x200")
+
+    frame = tk.Frame(ventana)
+    frame.pack(expand=True, fill="both", padx=10, pady=10)
+
     tk.Label(ventana, text="Ingrese su calificación:").pack(pady=5)
     entry_calificacion = tk.Entry(ventana)
     entry_calificacion.pack(pady=5)
@@ -266,6 +317,11 @@ def control_de_acceso():
 
     ventana = tk.Toplevel(root)
     ventana.title("Control de acceso")
+    ventana.geometry("400x200")
+
+    frame = tk.Frame(ventana)
+    frame.pack(expand=True, fill="both", padx=10, pady=10)
+
     tk.Label(ventana, text="Nombre de usuario:").pack(pady=5)
     entry_usuario = tk.Entry(ventana)
     entry_usuario.pack(pady=5)
@@ -277,23 +333,27 @@ def control_de_acceso():
 # Ventana principal
 root = tk.Tk()
 root.title("Aplicación Multitareas")
-root.geometry("400x600")
+root.geometry("600x500")
+root.config(bg="#000000")  # Fondo de la ventana
 
 # Etiqueta de bienvenida
-tk.Label(root, text="Seleccione una opción del menú:", font=("Arial", 14)).pack(pady=10)
+tk.Label(root, text="Seleccione una opción del menú:", font=("times new roman", 14), bg="#000000", fg="#AFCEE3").pack(pady=10)
 
 # Crear botones para cada opción
-tk.Button(root, text="1. Descuento en una tienda", command=descuento_tienda).pack(pady=5)
-tk.Button(root, text="2. Edad para votar", command=edad_para_votar).pack(pady=5)
-tk.Button(root, text="3. Mayor de tres números", command=mayor_de_tres_numeros).pack(pady=5)
-tk.Button(root, text="4. Clasificación de edades", command=clasificacion_edades).pack(pady=5)
-tk.Button(root, text="5. Calculadora básica", command=calculadora_basica).pack(pady=5)
-tk.Button(root, text="6. Determinar año bisiesto", command=determinar_bisiesto).pack(pady=5)
-tk.Button(root, text="7. Validar contraseña", command=validar_contraseña).pack(pady=5)
-tk.Button(root, text="8. Juego de números", command=juego_de_numeros).pack(pady=5)
-tk.Button(root, text="9. Calcular signo zodiacal", command=calcular_signo_zodiacal).pack(pady=5)
-tk.Button(root, text="10. Sistema de calificaciones", command=sistema_de_calificaciones).pack(pady=5)
-tk.Button(root, text="11. Control de acceso", command=control_de_acceso).pack(pady=5)
+button_width = 30  # Establecemos un ancho fijo para todos los botones
+
+tk.Button(root, text="1. Descuento en una tienda", command=descuento_tienda, bg="#4CAF50", fg="#FFFFFF", width=button_width).pack(pady=5)
+tk.Button(root, text="2. Edad para votar", command=edad_para_votar, bg="#4CAF50", fg="#FFFFFF", width=button_width).pack(pady=5)
+tk.Button(root, text="3. Mayor de tres números", command=mayor_de_tres_numeros, bg="#4CAF50", fg="#FFFFFF", width=button_width).pack(pady=5)
+tk.Button(root, text="4. Clasificación de edades", command=clasificacion_edades, bg="#4CAF50", fg="#FFFFFF", width=button_width).pack(pady=5)
+tk.Button(root, text="5. Calculadora básica", command=calculadora_basica, bg="#4CAF50", fg="#FFFFFF", width=button_width).pack(pady=5)
+tk.Button(root, text="6. Determinar año bisiesto", command=determinar_bisiesto, bg="#4CAF50", fg="#FFFFFF", width=button_width).pack(pady=5)
+tk.Button(root, text="7. Validar contraseña", command=validar_contraseña, bg="#4CAF50", fg="#FFFFFF", width=button_width).pack(pady=5)
+tk.Button(root, text="8. Juego de números", command=juego_de_numeros, bg="#4CAF50", fg="#FFFFFF", width=button_width).pack(pady=5)
+tk.Button(root, text="9. Calcular signo zodiacal", command=calcular_signo_zodiacal, bg="#4CAF50", fg="#FFFFFF", width=button_width).pack(pady=5)
+tk.Button(root, text="10. Sistema de calificaciones", command=sistema_de_calificaciones, bg="#4CAF50", fg="#FFFFFF", width=button_width).pack(pady=5)
+tk.Button(root, text="11. Control de acceso", command=control_de_acceso, bg="#4CAF50", fg="#FFFFFF", width=button_width).pack(pady=5)
 
 root.mainloop()
+
 
