@@ -24,7 +24,7 @@ class GestorCalificaciones:
     def __init__(self, root):
         self.alumnos = {}
         self.root = root
-        self.root.title("Gestión de Calificaciones")
+        self.root.title("Organizacion de calificaciones")
         self.root.geometry("800x600")
         self.root.configure(bg="#80BFFF")  # Fondo turquesa
         self.crear_interfaz()
